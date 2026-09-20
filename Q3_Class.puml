@@ -1,0 +1,33 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Ship {
+  - shipName : String
+  - yearBuilt : String
+  + Ship(shipName : String, yearBuilt : String)
+  + setShipName(shipName : String) : void
+  + setYearBuilt(yearBuilt : String) : void
+  + getShipName() : String
+  + getYearBuilt() : String
+  + print() : void
+}
+
+class CruiseShip {
+  - maxPassengers : int
+  + CruiseShip(shipName : String, yearBuilt : String, maxPassengers : int)
+  + setMaxPassengers(maxPassengers : int) : void
+  + getMaxPassengers() : int
+  + print() : void
+}
+
+class CargoShip {
+  - cargoCapacityTn : int
+  + CargoShip(shipName : String, yearBuilt : String, cargoCapacityTn : int)
+  + setCargoCapacityTn(cargoCapacityTn : int) : void
+  + getCargoCapacityTn() : int
+  + print() : void
+}
+
+Ship <|-- CruiseShip
+Ship <|-- CargoShip
+@enduml

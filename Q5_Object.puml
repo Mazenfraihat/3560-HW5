@@ -1,0 +1,51 @@
+@startuml
+object "<u>phpDemo1:Folder</u>" as root {
+  name = "php_demo1"
+}
+
+object "<u>sourceFiles:Folder</u>" as src {
+  name = "Source Files"
+}
+
+object "<u>includePath:Folder</u>" as inc {
+  name = "Include Path"
+}
+
+object "<u>remoteFiles:Folder</u>" as rem {
+  name = "Remote Files"
+}
+
+object "<u>phalcon:Folder</u>" as ph {
+  name = ".phalcon"
+}
+
+object "<u>cache:Folder</u>" as ca {
+  name = "cache"
+}
+
+object "<u>publicFolder:Folder</u>" as pub {
+  name = "public"
+}
+
+object "<u>htaccess:File</u>" as f1 {
+  name = ".htaccess"
+}
+
+object "<u>htrouter:File</u>" as f2 {
+  name = ".htrouter.php"
+}
+
+object "<u>indexHtml:File</u>" as f3 {
+  name = "index.html"
+}
+
+root *-- src
+root *-- inc
+root *-- rem
+src *-- ph
+src *-- ca
+src *-- pub
+pub *-- f1
+pub *-- f2
+pub *-- f3
+@enduml

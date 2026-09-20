@@ -1,0 +1,26 @@
+@startuml
+object "<u>ships:Ship[]</u>" as arr {
+  length = 3
+}
+
+object "<u>ships[0]:Ship</u>" as s0 {
+  shipName = "Old Explorer"
+  yearBuilt = "1985"
+}
+
+object "<u>ships[1]:CruiseShip</u>" as s1 {
+  shipName = "Ocean Queen"
+  yearBuilt = "2010"
+  maxPassengers = 3000
+}
+
+object "<u>ships[2]:CargoShip</u>" as s2 {
+  shipName = "Sea Hauler"
+  yearBuilt = "1998"
+  cargoCapacityTn = 75000
+}
+
+arr --> s0
+arr --> s1
+arr --> s2
+@enduml

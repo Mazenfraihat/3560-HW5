@@ -1,0 +1,46 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Course {
+  - courseName : String
+  - instructors : ArrayList<Instructor>
+  - textbooks : ArrayList<Textbook>
+  + Course(courseName : String, instructors : ArrayList<Instructor>, textbooks : ArrayList<Textbook>)
+  + setCourseName(courseName : String) : void
+  + setInstructors(instructors : ArrayList<Instructor>) : void
+  + setTextbooks(textbooks : ArrayList<Textbook>) : void
+  + getCourseName() : String
+  + getInstructors() : ArrayList<Instructor>
+  + getTextbooks() : ArrayList<Textbook>
+  + print() : void
+}
+
+class Instructor {
+  - f_name : String
+  - l_name : String
+  - officeNumber : String
+  + Instructor(f_name : String, l_name : String, officeNumber : String)
+  + setF_name(f_name : String) : void
+  + setL_name(l_name : String) : void
+  + setOfficeNumber(officeNumber : String) : void
+  + getF_name() : String
+  + getL_name() : String
+  + getOfficeNumber() : String
+}
+
+class Textbook {
+  - title : String
+  - author : String
+  - publisher : String
+  + Textbook(title : String, author : String, publisher : String)
+  + setTitle(title : String) : void
+  + setAuthor(author : String) : void
+  + setPublisher(publisher : String) : void
+  + getTitle() : String
+  + getAuthor() : String
+  + getPublisher() : String
+}
+
+Course "1" o-- "1..*" Instructor
+Course "1" o-- "1..*" Textbook
+@enduml

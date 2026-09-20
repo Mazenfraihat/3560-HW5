@@ -1,0 +1,30 @@
+@startuml
+object "<u>cs3560:Course</u>" as c {
+  courseName = "CS 3560"
+}
+
+object "<u>instructors:ArrayList</u>" as il {
+  size = 1
+}
+
+object "<u>textbooks:ArrayList</u>" as tl {
+  size = 1
+}
+
+object "<u>nima:Instructor</u>" as i1 {
+  f_name = "Nima"
+  l_name = "Davarpanah"
+  officeNumber = "3-2636"
+}
+
+object "<u>cleanCode:Textbook</u>" as t1 {
+  title = "Clean Code"
+  author = "Robert C. Martin"
+  publisher = "Prentice Hall"
+}
+
+c o-- il
+c o-- tl
+il --> i1
+tl --> t1
+@enduml

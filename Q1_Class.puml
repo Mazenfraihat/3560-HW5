@@ -1,0 +1,60 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Employee {
+  - f_name : String
+  - l_name : String
+  - ssn : String
+  + Employee(f_name : String, l_name : String, ssn : String)
+  + setF_name(f_name : String) : void
+  + setL_name(l_name : String) : void
+  + setSsn(ssn : String) : void
+  + getF_name() : String
+  + getL_name() : String
+  + getSsn() : String
+  + print() : void
+}
+
+class SalariedEmployee {
+  - Salary : double
+  + SalariedEmployee(f_name : String, l_name : String, ssn : String, Salary : double)
+  + setSalary(Salary : double) : void
+  + getSalary() : double
+  + print() : void
+}
+
+class HourlyEmployee {
+  - wage : double
+  - hoursWorked : double
+  + HourlyEmployee(f_name : String, l_name : String, ssn : String, wage : double, hoursWorked : double)
+  + setWage(wage : double) : void
+  + setHoursWorked(hoursWorked : double) : void
+  + getWage() : double
+  + getHoursWorked() : double
+  + print() : void
+}
+
+class CommissionEmployee {
+  - commissionRate : double
+  - grossSale : double
+  + CommissionEmployee(f_name : String, l_name : String, ssn : String, commissionRate : double, grossSale : double)
+  + setCommissionRate(commissionRate : double) : void
+  + setGrossSale(grossSale : double) : void
+  + getCommissionRate() : double
+  + getGrossSale() : double
+  + print() : void
+}
+
+class BaseEmployee {
+  - baseSalary : double
+  + BaseEmployee(f_name : String, l_name : String, ssn : String, baseSalary : double)
+  + setBaseSalary(baseSalary : double) : void
+  + getBaseSalary() : double
+  + print() : void
+}
+
+Employee <|-- SalariedEmployee
+Employee <|-- HourlyEmployee
+Employee <|-- CommissionEmployee
+Employee <|-- BaseEmployee
+@enduml
